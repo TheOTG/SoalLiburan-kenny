@@ -15,8 +15,27 @@
 */
 function benderaInggris(param)
 {
-    // your code here
 
+    if(param % 2 === 0) {
+        return "invalid input";
+    }
+
+    for(var i = 0; i < param; i++) {
+        var temp = "'";
+        for(var j = 0; j < param; j++) {
+            if(i === Math.floor(param / 2)) {
+                temp += "*";
+            } else if(j === Math.floor(param / 2)) {
+                temp += "*";
+            } else {
+                temp += " ";
+            }
+        }
+        temp += "'";
+        console.log(temp);
+    }
+
+    return "";
 }
 
 console.log(benderaInggris(9))

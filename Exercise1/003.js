@@ -1,6 +1,19 @@
 function soal3(param)
 {
-    // your code here 
+    var result = [];
+    var temp = [];
+    var count = 1;
+
+    for(var i = 0; i < param; i++) {
+        for(var j = 0; j < param; j++) {
+            temp.push(count);
+            count++;
+        }
+        result.push(temp);
+        temp = [];
+    }
+    
+    return result;
 }
 
 console.log(soal3(5)) 

@@ -9,19 +9,31 @@
 */
 
 
-function addAll()
+function addAll(num)
 {
-    // your code here
+    if(num[0] === 1 || num[num.length - 1] === 1) {
+        if(num[0] < num[num.length - 1]) {
+            return (num[num.length - 1] * (num[num.length - 1] + 1)) / 2;
+        } else {
+            return (num[0] * (num[0] + 1)) / 2;
+        }
+    } else {
+        if(num[0] < num[num.length - 1]) {
+            return ((num[num.length - 1] * (num[num.length - 1] + 1)) / 2) - ((num[0] - 1) * num[0] / 2);
+        } else {
+            return ((num[0] * (num[0] + 1)) / 2) - ((num[num.length - 1] - 1) * num[num.length - 1] / 2);
+        }
+    }
 }
 
-console.log([1,2,3,4,5])
+console.log(addAll([1,2,3,4,5]));
 // 15
 
-console.log([5,6,7,8,9,10]);
+console.log(addAll([5,6,7,8,9,10]));
 // 45
 
-console.log([2,3,4,5,6]);
+console.log(addAll([2,3,4,5,6]));
 // 20
 
-console.log([8,7,6,5,4,3,2]); 
+console.log(addAll([8,7,6,5,4,3,2]));
 // 35

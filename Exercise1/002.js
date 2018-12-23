@@ -1,11 +1,21 @@
 function soal2(param)
 {
-    // your code here 
+    var result = [];
+    var temp = {};
 
+    for(var i = 0; i < param.length; i++) {
+        temp.firstName = param[i][0];
+        temp.lastName = param[i][1];
+        temp.hobbies = param[i][2];
+        temp.profession = param[i][3];
+        result.push(temp);
+    }
+    
+    return result;
 }
 
-console.log([ ['Aries','Dimas',['coding','pubg','anime'],'Web Developer'] , 
-['Radit','Dika',['manga','gaming'],'Web Developer'] ]);
+console.log(soal2([ ['Aries','Dimas',['coding','pubg','anime'],'Web Developer'] , 
+['Radit','Dika',['manga','gaming'],'Web Developer'] ]));
 
 /* output 
   
@@ -26,5 +36,5 @@ console.log([ ['Aries','Dimas',['coding','pubg','anime'],'Web Developer'] ,
 
 */ 
 
-console.log([ ['Awtian','Akbar',['coding','main kucing','anime'],'Web Instructur'] , 
-['Megalo','Maniak',['metal music','maniac'],'Maniac Expert'] ]);
+console.log(soal2([ ['Awtian','Akbar',['coding','main kucing','anime'],'Web Instructur'] , 
+['Megalo','Maniak',['metal music','maniac'],'Maniac Expert'] ]));

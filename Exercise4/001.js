@@ -1,6 +1,20 @@
 function soal1(param)
 {
-    // Your Code Here
+    var result = [];
+
+    for(var i = 1; i <= param; i++) {
+        if((i % 4 === 0) && (i % 7 === 0) && (i !== 0)) {
+            result.push('FizzBuzz');
+        } else if(i % 4 === 0) {
+            result.push('Fizz');
+        } else if(i % 7 === 0) {
+            result.push('Buzz');
+        } else {
+            result.push('');
+        }
+    }
+
+    return result;
 }
 
 console.log(soal1(20))

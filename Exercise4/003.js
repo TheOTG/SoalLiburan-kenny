@@ -2,7 +2,13 @@
 
 function soal3(param1, param2)
 {
-    // your code here 
+    var result = 1;
+
+    for(var i = 0; i < param2; i++) {
+        result *= param1
+    }
+
+    return result;
 }
 
 console.log(soal3(2,5))

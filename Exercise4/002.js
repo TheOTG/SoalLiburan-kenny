@@ -1,6 +1,22 @@
 function soal2(param)
 {
-    // your code here
+    if(param.length < 3) {
+        return "invalid input";
+    } else if(param.length % 2 === 0) {
+        for(var i = 0; i < param.length; i++) {
+            if(i === param.length / 2 || i === (param.length / 2) - 1) {
+                param[i] = param[0] * param[param.length - 1];
+            }
+        }
+    } else {
+        for(var i = 0; i < param.length; i++) {
+            if(i === Math.floor(param.length / 2)) {
+                param[i] = param[0] * param[param.length - 1];
+            }
+        }
+    }
+    
+    return param;
 }
 
 console.log(soal2([34,'','','',40]))

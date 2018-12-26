@@ -1,6 +1,23 @@
 function rocket(param)
 {
-    // your code here
+    var result = [];
+    var tempA = [];
+    var tempB = [];
+
+    for(var i = 0; i < param; i++) {
+
+        for(var j = 0; j < param; j++) {
+            tempB.push(i);
+            tempB.push(j);
+            tempA.push(tempB);
+            tempB = [];
+        }
+        
+        result.push(tempA);
+        tempA = [];
+    }
+
+    return result;
 }
 
 console.log(rocket(3))

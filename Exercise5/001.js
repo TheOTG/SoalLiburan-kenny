@@ -1,6 +1,14 @@
 function soal1(objList,id,action)
 {
-    // your code here 
+    if(action === "view") {
+        return objList[id];
+    }
+
+    if(action === "delete") {
+        objList[id] = objList[id + 1]
+        delete objList[id + 1];
+        return objList;
+    }
 }
 
 console.log(soal1({

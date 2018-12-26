@@ -10,7 +10,30 @@
 */
 
 function generateBar(p,t) {
-    // your code here
+    var temp = "";
+    
+    if(p < t) {
+        console.log("panjang harus lebih besar daripada tinggi");
+    } else {
+        
+        for(var i = 0; i < t; i++) {
+            
+            for(var j = 0; j < p; j++) {
+                if(i === 0 || i === t - 1) {
+                    temp += "o";
+                } else if(j === 0 || j === p -1) {
+                    temp += "o";
+                } else {
+                    temp += " ";
+                }
+            }
+
+            console.log(temp);
+            temp = "";
+        }
+    }
+
+    return "";
 }
 
 generateBar(4,3)//

@@ -32,7 +32,29 @@
 */
 
 function generateBarXO(p,t) {
-    // your code here 
+    var temp = "";
+    var count = 1;
+
+    for(var i = 0; i < t; i++) {
+
+        for(var j = 0; j < p; j++) {
+            if(count === 1) {
+                temp += "x";
+                count++;
+            } else if(count === 2) {
+                temp += "o";
+                count++;
+            } else {
+                temp += "o";
+                count = 1;
+            }
+        }
+
+        console.log(temp);
+        temp = "";
+    }
+
+    return "";
 }
 
 generateBarXO(4,3)

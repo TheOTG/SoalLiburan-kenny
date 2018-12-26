@@ -17,12 +17,10 @@ function addAll(num)
         } else {
             return (num[0] * (num[0] + 1)) / 2;
         }
+    } else if(num[0] < num[num.length - 1]) {
+        return ((num[num.length - 1] * (num[num.length - 1] + 1)) / 2) - ((num[0] - 1) * num[0] / 2);
     } else {
-        if(num[0] < num[num.length - 1]) {
-            return ((num[num.length - 1] * (num[num.length - 1] + 1)) / 2) - ((num[0] - 1) * num[0] / 2);
-        } else {
-            return ((num[0] * (num[0] + 1)) / 2) - ((num[num.length - 1] - 1) * num[num.length - 1] / 2);
-        }
+        return ((num[0] * (num[0] + 1)) / 2) - ((num[num.length - 1] - 1) * num[num.length - 1] / 2);
     }
 }
 

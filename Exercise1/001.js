@@ -1,16 +1,10 @@
 function soal1(param)
 {
     var temp = [];
+
     if(param === 0) {
         return "invalid input";
-    }
-
-    if(param === 1) {
-        temp.push('*');
-        return temp;
-    }
-
-    if(param % 2 === 0) {
+    } else if(param % 2 === 0) {
         for(var i = 0; i < param; i++) {
             if(i === param / 2 || i === (param / 2) - 1) {
                 temp.push('*');
@@ -27,6 +21,7 @@ function soal1(param)
             }
         }
     }
+    
     return temp;
 }
 

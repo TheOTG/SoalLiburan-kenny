@@ -11,7 +11,24 @@
 
 function scotlandFlag(param)
 {
-    // yout code here 
+    if(param % 2 === 0 || param <= 3) {
+        return "invalid input";
+    }
+
+    for(var i = 0; i < param; i++) {
+        var temp = "'";
+        for(var j = 0; j < param; j++) {
+            if(j === i || j === param - i - 1) {
+                temp += "*";
+            } else {
+                temp += " ";
+            }
+        }
+        temp += "'";
+        console.log(temp);
+    }
+
+    return "";
 }
 
 console.log(scotlandFlag(5))

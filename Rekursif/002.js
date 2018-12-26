@@ -21,8 +21,21 @@
 */
 
 function palindromeRecursive(str) {
-    // your code here 
+    
+    if(str.length === 0 || str.length === 1) {
+        return true;
+    }
+    
+    if(str[0] === str[str.length - 1]) {
+        return palindromeRecursive(str.slice(1, str.length - 1));
+    }
+
+    return false;
 }
+
+console.log(palindromeRecursive("kasur ini rusak")) // true
+console.log(palindromeRecursive("nababan")) // true
+console.log(palindromeRecursive("makan")) // false
 
 palindromeRecursive("kasur ini rusak") // true 
 

@@ -1,9 +1,15 @@
 function soal1(param)
 {
-    // your code here
+    var word = "";
+    
+    for(var i = 0; i < param.length; i++) {
+        word += param[param.length - 1 - i] + "\n";
+    }
+
+    return word;
 }
 
-console.log("Aries Dimas Yudhistira");
+console.log(soal1("Aries Dimas Yudhistira"));
 /*
     a
     r
